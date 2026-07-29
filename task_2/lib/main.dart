@@ -3,12 +3,21 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 }
+void test(){
+  var person ={"age":20,"names":"foo"};
+  print(person);
+
+
+  
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+    test();
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: ProfilePage(),
     );
   }
@@ -48,7 +57,6 @@ class ProfilePage extends StatelessWidget {
               style: TextStyle(fontSize: 14, color: Colors.grey),
             ),
             SizedBox(height: 24),
-
             // Info card
             Card(
               elevation: 3,
